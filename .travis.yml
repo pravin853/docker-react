@@ -5,5 +5,5 @@ services:
 before_install:
   - docker build -t pravin853/docker-react -f Dockerfile.dev .
 
-script: 
-  - docker run -e CT=true  pravin853/docker-react npm run test -- --coverage
+script:
+  - docker run -e CI=true  pravin853/docker-react npm run test -- --coverage
